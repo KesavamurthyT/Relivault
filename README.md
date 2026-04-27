@@ -22,19 +22,18 @@ Transparent fund tracking · Immutable Document Storage · Role-Based Access · 
   <img src="https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb" alt="MongoDB" />
 </p>
 
-[▶️ Watch Demo Video](#)
 
 </div>
 
-## 🚨 Problem
+##  Problem
 
 During disaster relief efforts, there is often a significant lack of transparency in how funds are distributed. Donors are left wondering if their contributions reached the intended victims, while administrative inefficiencies and misallocation of resources hinder the effectiveness of relief organizations (NGOs).
 
-## 💡 Solution
+## Solution
 
 **Relivault** introduces a decentralized, tamper-proof tracking system. Using blockchain smart contracts and IPFS for immutable document storage, Relivault guarantees that every transaction is publicly verifiable, documents cannot be altered, and funds are strictly monitored from donors to victims.
 
-## ✨ Features
+##  Features
 
 - **Transparent Fund Tracking:** Real-time visibility of donations, claims, and organization disbursements.
 - **Immutable Document Storage:** IPFS integration ensures uploaded identity and claim documents cannot be altered.
@@ -43,7 +42,7 @@ During disaster relief efforts, there is often a significant lack of transparenc
 - **NFT-Based Donor Recognition:** Donors receive digital, verifiable certificates (NFTs) as a badge of appreciation.
 - **Secure Authentication:** Firebase-powered role verification combined with secure Web3 MetaMask wallet connections.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend Core:** React 19, Next.js 15, TypeScript
 - **Styling & UI:** Tailwind CSS, Radix UI, Recharts, Lucide React
@@ -53,7 +52,7 @@ During disaster relief efforts, there is often a significant lack of transparenc
 - **Decentralized Storage:** IPFS & Pinata
 - **Wallets:** MetaMask integration
 
-## 🏗 Architecture
+##  Architecture
 
 Relivault employs a modern hybrid Web2 / Web3 architecture:
 1. **Client Layer:** Next.js application served to end-users (Victims, Donors, NGOs). Wallet connection is facilitated via MetaMask.
@@ -62,7 +61,7 @@ Relivault employs a modern hybrid Web2 / Web3 architecture:
    - Files and sensitive claims evidence are instantly pinned to **IPFS** for immutability.
    - Financial ledger entries, disbursements, and NFT Minting are transacted on-chain via **Solidity Smart Contracts** (deployed via Hardhat).
 
-## 🚀 Setup / Installation
+##  Setup / Installation
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/en/) (v18 or higher)
