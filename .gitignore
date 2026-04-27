@@ -64,3 +64,6 @@ Thumbs.db
 
 # Secrets / Credentials
 serviceAccount.json
+
+# Custom user ignored folders
+do not touch/
