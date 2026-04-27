@@ -1,0 +1,35 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow authenticated users to read and write to the 'claims' collection
+    match /claims/{claimId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Allow authenticated users to read and write to the 'ipfs_cids' collection
+    match /ipfs_cids/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Allow authenticated users to read from the 'users' collection
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      // You might want to add more specific write rules here, e.g.,
+      // allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Allow authenticated users to read from the 'donations' collection
+    match /donations/{donationId} {
+      allow read: if request.auth != null;
+      // Donations are typically written by the contract owner or a specific process,
+      // so write rules might be more restrictive.
+    }
+
+    // This broad rule is insecure and should be removed or made more specific for production.
+    // For development, if you need to allow broad access temporarily, consider:
+    // match /{document=**} {
+    //   allow read, write: if true; // VERY INSECURE - ONLY FOR TEMPORARY LOCAL DEVELOPMENT
+    // }
+  }
+}
